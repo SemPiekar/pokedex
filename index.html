@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Ubuntu"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <h1 class="navbar-title">Pokedex</h1>
+      <div class="navbar-controls">
+        <label for="sort-select">Sort by:</label>
+        <select id="sort-select">
+          <option value="id-asc">ID (Ascending)</option>
+          <option value="id-desc">ID (Descending)</option>
+          <option value="type">Type</option>
+          <option value="hp">HP</option>
+          <option value="attack">Attack</option>
+          <option value="name">Alphabetical</option>
+        </select>
+        <div class="search-bar">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Search Pokémon by name"
+          />
+          <i class="fas fa-search"></i>
+        </div>
+      </div>
+    </nav>
+
+    <div class="pokedex" id="pokemon-list">
+      <!-- Pokémon cards will be displayed here -->
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

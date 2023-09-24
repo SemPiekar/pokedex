@@ -1,0 +1,240 @@
+body {
+  font-family: "Ubuntu", sans-serif;
+  background-image: url(./backgrounds/background.png);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.pokedex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.pokemon-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.pokemon-container > div {
+  position: relative;
+  margin: 16px;
+  border-radius: 1em;
+  width: 150px;
+  height: 150px;
+}
+
+.pokemon-container > div:before {
+  position: absolute;
+  transform: translate3d(-16px, -16px, 0);
+  z-index: 2;
+}
+
+.pokemon-container .id,
+.pokemon-container .name {
+  position: absolute;
+  padding: 5px 15px;
+  background: rgba(255, 255, 255, 0.45);
+  font-size: 16px;
+  z-index: 1;
+  text-transform: capitalize; /* Capitalize the first letter of text */
+}
+
+.pokemon-container .id {
+  right: 0;
+}
+
+.pokemon-container .name {
+  bottom: 0;
+}
+
+.pokemon-container .id:before {
+  content: "# ";
+}
+
+.pokemon-container img {
+  width: 100%;
+  transform: scale(0.7);
+}
+
+.pokemon-container .grass:before {
+  content: url(icons/grass.png);
+}
+
+.pokemon-container .fire:before {
+  content: url(icons/fire.png);
+}
+
+.pokemon-container .water:before {
+  content: url(icons/water.png);
+}
+
+.pokemon-container .bug:before {
+  content: url(icons/bug.png);
+}
+
+.pokemon-container .normal:before {
+  content: url(icons/normal.png);
+}
+
+.pokemon-container .poison:before {
+  content: url(icons/poison.png);
+}
+
+.pokemon-container .electric:before {
+  content: url(icons/electric.png);
+}
+
+.pokemon-container .ground:before {
+  content: url(icons/ground.png);
+}
+
+.pokemon-container .dragon:before {
+  content: url(icons/dragon.png);
+}
+
+.pokemon-container .fairy:before {
+  content: url(icons/fairy.png);
+}
+
+.pokemon-container .fighting:before {
+  content: url(icons/fighting.png);
+}
+
+.pokemon-container .flying:before {
+  content: url(icons/flying.png);
+}
+
+.pokemon-container .ghost:before {
+  content: url(icons/ghost.png);
+}
+
+.pokemon-container .ice:before {
+  content: url(icons/ice.png);
+}
+
+.pokemon-container .psychic:before {
+  content: url(icons/psychic.png);
+}
+
+.pokemon-container .rock:before {
+  content: url(icons/rock.png);
+}
+
+.pokemon-container .steel:before {
+  content: url(icons/steel.png);
+}
+
+.pokemon-container .dark:before {
+  content: url(icons/dark.png);
+}
+
+.poke-card {
+  display: flex;
+  box-sizing: border-box;
+  margin: 2rem;
+  border-radius: 1em;
+  width: 400px;
+  background: #fff;
+  box-shadow: 0 1rem 40px rgba(34, 35, 58, 0.25);
+  flex-direction: row;
+  overflow: hidden;
+  position: relative; /* Add position relative to .poke-card */
+}
+
+.poke-back {
+  position: relative;
+  width: 50%;
+  padding-top: 50%;
+}
+
+.poke-back img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.poke-data {
+  flex: 1;
+  padding: 1.5em 2em;
+  text-align: right;
+}
+
+.poke-icon {
+  position: absolute; /* Position the icon absolutely */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Center the icon */
+  border: 6px solid #fff;
+  border-radius: 50%;
+  width: 4em;
+  height: 4em;
+  background: #eee;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* CSS for the navigation bar */
+.navbar {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-title {
+  font-size: 24px;
+  margin: 0; /* Reset margin to align to the left */
+}
+
+.navbar-controls {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-controls label {
+  margin-right: 10px;
+  color: #fff;
+}
+
+.navbar-controls select,
+.navbar-controls input[type="text"] {
+  padding: 5px;
+  border: none;
+  border-radius: 3px;
+}
+
+.navbar-controls select {
+  background-color: #444;
+  color: white;
+}
+
+/* CSS for the search bar and icon */
+#search-input {
+  padding: 5px 25px 5px 10px; /* Adjust padding for the icon */
+  border: none;
+  border-radius: 20px; /* Set border radius */
+  margin-left: 1rem;
+}
+
+#search-input:focus {
+  outline: none;
+}
+
+.fa-search {
+  position: absolute;
+  top: 50%;
+  left: 10px; /* Adjust the left position for the icon */
+  transform: translateY(-50%);
+  color: #aaa;
+}
+
+.typeContainer {
+  display: flex;
+  justify-content: space-between;
+}
